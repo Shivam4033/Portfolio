@@ -2126,6 +2126,131 @@ header.hero {
 .nav-links a:hover {
   color: #38BDF8;
 }
+/* ================= MOBILE & TABLET RESPONSIVE FIXES ================= */
+
+/* 1. Global Box & Text Overflow Guard */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* 2. Tablet & Below (max-width: 868px) */
+@media screen and (max-width: 868px) {
+  /* Navigation Bar */
+  .header-wrap {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  /* About Grid (Stack Avatar on Top of Card) */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .ascii-container {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* Pipeline 4-Step Grid */
+  .pipe-nodes-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Pipeline Inspector Drawer */
+  .inspector-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Dual Panel (Certifications & Education) */
+  .dual-section-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  /* Contact Grid */
+  .contact-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 3. Mobile Phones (max-width: 540px) */
+@media screen and (max-width: 540px) {
+  .sec-title {
+    font-size: 22px;
+  }
+
+  /* About Section Card & Telemetry */
+  .about-card-wrap,
+  .pipe-container,
+  .arsenal-wrap,
+  .terminal-panel,
+  .contact-box-wrap {
+    padding: 16px !important;
+  }
+
+  .about-telemetry-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Pipeline single column on tiny screens */
+  .pipe-nodes-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Technical Arsenal Cards */
+  .arsenal-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Interactive Modal Box */
+  .email-modal-box {
+    padding: 16px !important;
+    width: 95% !important;
+  }
+
+  .modal-opt-btn {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+
+  /* Inline Footer */
+  .contact-footer-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 </style>
 </head>
 <body class="booting">
